@@ -1,0 +1,180 @@
+<html>
+
+<head>
+
+    <!--Foundation CSS-->
+    <link rel="stylesheet" href="vendor/css/foundation.min.css">
+
+    <!--Autocomplete CSS-->
+    <link rel="stylesheet" href="vendor/autocomplete/easy-autocomplete.css">
+
+    <!--Icon CSS-->
+    <link rel="stylesheet" href="vendor/icons/foundation-icons.css">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <title>
+        Marianopolis Schedule Maker
+    </title>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
+    <!--GA-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-69201275-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body>
+
+<!--Introduction Modal-->
+<div class="reveal warningReveal" data-reveal>
+    <h3>Fall 2017 Schedule Update</h3>
+    <p>The website has been updated to take into account the new course offering but there might still be bugs so I urge you to double check your schedule. If you see any inconsistencies, please notify <a href="https://www.facebook.com/marco.jiralerspong">Marco Jiralerspong</a>.</p>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!--Show Save Code Modal-->
+<div class="reveal saveReveal" data-reveal>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!--Load Save Code Modal-->
+<div class="reveal loadReveal" data-reveal>
+    <h4>Enter your save code:</h4>
+    <h6>This will replace your current schedule with the one from your save code</h6>
+    <input class="loadSchedule-input" type="text">
+    <a href="" class="loadQuery-button large button">Load</a>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!--Export Schedule Modal-->
+<div class="reveal exportReveal" data-reveal>
+    <ul class="exportClasses">
+    </ul>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!--Instructions Modal-->
+<div class="reveal revealInstructions" id="exampleModal1" data-reveal>
+    <h3>Instructions</h3>
+    <ul>
+        <li>Choose how you want to search for a class (code, name, teacher) by selecting an option from the dropdown</li>
+        <li>Enter your search into the box under find class and hit enter or click on the search icon to search for classes</li>
+        <li>Click on the class options that appear to add them to your schedule</li>
+    </ul>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!--Schedule Block-->
+<div class="expanded row">
+    <div class="large-9 collapse small-12 columns">
+        <table>
+
+            <!--Table Headers-->
+            <tr>
+                <th style="text-align: left;">Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+
+            <!--Table Body-->
+            <tr><td>8:15</td><td class="c0 r0"></td><td class="c1 r0"></td><td class="c2 r0"></td><td class="c3 r0"></td><td class="c4 r0"></td></tr><tr><td>8:45</td><td class="c0 r1"></td><td class="c1 r1"></td><td class="c2 r1"></td><td class="c3 r1"></td><td class="c4 r1"></td></tr><tr><td>9:15</td><td class="c0 r2"></td><td class="c1 r2"></td><td class="c2 r2"></td><td class="c3 r2"></td><td class="c4 r2"></td></tr><tr><td>9:45</td><td class="c0 r3"></td><td class="c1 r3"></td><td class="c2 r3"></td><td class="c3 r3"></td><td class="c4 r3"></td></tr><tr><td>10:15</td><td class="c0 r4"></td><td class="c1 r4"></td><td class="c2 r4"></td><td class="c3 r4"></td><td class="c4 r4"></td></tr><tr><td>10:45</td><td class="c0 r5"></td><td class="c1 r5"></td><td class="c2 r5"></td><td class="c3 r5"></td><td class="c4 r5"></td></tr><tr><td>11:15</td><td class="c0 r6"></td><td class="c1 r6"></td><td class="c2 r6"></td><td class="c3 r6"></td><td class="c4 r6"></td></tr><tr><td>11:45</td><td class="c0 r7"></td><td class="c1 r7"></td><td class="c2 r7"></td><td class="c3 r7"></td><td class="c4 r7"></td></tr><tr><td>12:15</td><td class="c0 r8"></td><td class="c1 r8"></td><td class="c2 r8"></td><td class="c3 r8"></td><td class="c4 r8"></td></tr><tr><td>12:45</td><td class="c0 r9"></td><td class="c1 r9"></td><td class="c2 r9"></td><td class="c3 r9"></td><td class="c4 r9"></td></tr><tr><td>13:15</td><td class="c0 r10"></td><td class="c1 r10"></td><td class="c2 r10"></td><td class="c3 r10"></td><td class="c4 r10"></td></tr><tr><td>13:45</td><td class="c0 r11"></td><td class="c1 r11"></td><td class="c2 r11"></td><td class="c3 r11"></td><td class="c4 r11"></td></tr><tr><td>14:15</td><td class="c0 r12"></td><td class="c1 r12"></td><td class="c2 r12"></td><td class="c3 r12"></td><td class="c4 r12"></td></tr><tr><td>14:45</td><td class="c0 r13"></td><td class="c1 r13"></td><td class="c2 r13"></td><td class="c3 r13"></td><td class="c4 r13"></td></tr><tr><td>15:15</td><td class="c0 r14"></td><td class="c1 r14"></td><td class="c2 r14"></td><td class="c3 r14"></td><td class="c4 r14"></td></tr><tr><td>15:45</td><td class="c0 r15"></td><td class="c1 r15"></td><td class="c2 r15"></td><td class="c3 r15"></td><td class="c4 r15"></td></tr><tr><td>16:15</td><td class="c0 r16"></td><td class="c1 r16"></td><td class="c2 r16"></td><td class="c3 r16"></td><td class="c4 r16"></td></tr><tr><td>16:45</td><td class="c0 r17"></td><td class="c1 r17"></td><td class="c2 r17"></td><td class="c3 r17"></td><td class="c4 r17"></td></tr><tr><td>17:15</td><td class="c0 r18"></td><td class="c1 r18"></td><td class="c2 r18"></td><td class="c3 r18"></td><td class="c4 r18"></td></tr><tr><td>17:45</td><td class="c0 r19"></td><td class="c1 r19"></td><td class="c2 r19"></td><td class="c3 r19"></td><td class="c4 r19"></td></tr><tr><td>18:15</td><td class="c0 r20"></td><td class="c1 r20"></td><td class="c2 r20"></td><td class="c3 r20"></td><td class="c4 r20"></td></tr><tr><td>18:45</td><td class="c0 r21"></td><td class="c1 r21"></td><td class="c2 r21"></td><td class="c3 r21"></td><td class="c4 r21"></td></tr><tr><td>19:15</td><td class="c0 r22"></td><td class="c1 r22"></td><td class="c2 r22"></td><td class="c3 r22"></td><td class="c4 r22"></td></tr><tr><td>19:45</td><td class="c0 r23"></td><td class="c1 r23"></td><td class="c2 r23"></td><td class="c3 r23"></td><td class="c4 r23"></td></tr>
+
+        </table>
+    </div>
+
+    <!--Right Colulmn-->
+    <div class="large-3 collapse right-column small-12 columns">
+        <div class="classOptions">
+
+            <!--Add Class Section-->
+            <div class="addClass">
+
+                <div class="row">
+
+                    <div class="large-5 collapse columns">
+                        <h5 class="findClass-title">Find Class</h5>
+                    </div>
+
+                    <!--Search Type Ooptions-->
+                    <div style="text-align: right" class="large-7 collapse columns">
+                        <select id="searchType">
+                            <option value="courseCode">Course Code</option>
+                            <option value="className">Class Name</option>
+                            <option value="teacherName">Teacher</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <!--Search Field-->
+                    <input id="autocomplete" placeholder = "603-103-MQ" >
+                    <!--Search Icon-->
+                    <i class="search-magnifying-glass fi-magnifying-glass"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Additional Features-->
+        <div class="row">
+            <div class="large-4 collapse columns">
+                <a href="" class="saveButton button">Save Schedule</a>
+            </div>
+            <div class="large-4 collapse columns">
+                <a href="" class="loadButton secondary button">Load Schedule</a>
+            </div>
+            <div class="large-4 collapse columns">
+                <a href="" class="exportButton alert button">Export Schedule</a>
+            </div>
+        </div>
+
+        <a href="" class="instructionButton success expanded button">Instructions</a>
+
+    </div>
+
+</div>
+
+<!--Jquery-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<!--Foundation JS-->
+<script src="vendor/js/vendor/foundation.min.js"></script>
+<script src="vendor/js/vendor/what-input.js"></script>
+
+<!--AutoComplete JS-->
+<script src="vendor/autocomplete/jquery.easy-autocomplete.min.js"></script>
+
+<!--Custom JS-->
+<script src="vendor/js/app.js"></script>
+
+</body>
+
+<footer>
+</footer>
+
+</html>
